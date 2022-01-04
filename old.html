@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Ml-group-12-proj by rtiruveedhi3</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">Ml-group-12-proj</h1>
+        <p class="header">Machine Learning Fall 2020 Project</p>
+
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.gatech.edu/rtiruveedhi3">rtiruveedhi3</a></p>
+
+
+      </header>
+      <section>
+        <h3>
+<a id="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About Us</h3>
+<p>Revanth Tiruveedhi, Abhishek Mattipalli, Shehruz Khan, Rahul Patel, Jesse Du</p>
+<h3>
+<a id="designer-templates1" class="anchor" href="#designer-templates1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Proposal Presentation</h3>
+<p>Link to Youtube Video: <a href=https://youtu.be/WFDisGUZF6M>https://youtu.be/WFDisGUZF6M</a></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/WFDisGUZF6M" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	      
+<h3>
+<a id="designer-templates" class="anchor" href="#designer-templates" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Intro/Background</h3>
+<p>Music today has become a staple of a user's daily lifestyle. Especially during the pandemic, music platforms have seen a great increase in subscriptions which shows how much people 
+	love their music [4]. Platforms such as Spotify, Apple Music, and Soundcloud facilitate access to music have a recommendation system in place that isn’t completely transparent to the listener. 
+	For example when you play through a playlist on Spotify, songs which it deems similar to your playlist get played and it also provides recommended songs to add while creating a playlist. While we've recommended 
+	great music on these platforms, there’s been times where we’ve been unsatisfied as well.</p>
+<h3>
+<a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Problem Statement</h3>
+<p> We look to cluster and recommend songs based on quantifiable features of music regardless of genre, year, or artist. </p>
+<h3>
+<a id="authors-and-contributors" class="anchor" href="#authors-and-contributors" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Method</h3>
+<p>We found a Kaggle dataset [2] which was compiled from Spotify’s Web API service [1] that lists a compiled list of music features for each song that it retrieved. The Kaggle dataset 
+	that our team will be using has a list of top songs from the years 2010 to 2019. </p>
+<p>After speaking with the TAs and reading through some past projects [3, 5], we think that dimensionality reduction through PCA or t-SNE would be good. Either of these methods would provide 
+	us with an initial visualization that has distinct clusters, even though the dimensions of the visualization are limited.</p>
+<p>After this, we would apply an unsupervised learning method that creates clusters, such as K-Means or DBSCAN, to the Kaggle dataset with a set of features that explains the majority of variance 
+	in data. Once these clusters are created, we now would have the fundamentals of our recommendation system down.</p>
+<p>Then, we would want our model to be able to process one song or a list of songs and provide a list of song recommendations. We would need to use the Spotify API to extract features of the input song or songs. 
+	With regards to recommending songs, we think that the KNN algorithm would be ideal for this, and we would define some distance metrics to see how sensitive our recommendations are to the specified distance 
+	functions. </p>	      
+<h3>
+<a id="authors-and-contributors1" class="anchor" href="#authors-and-contributors1" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Potential Results</h3>
+<p>From this, we could create a “recommendation system” of sorts where users could find songs that are quantitatively similar, with respect to Spotify’s features, rather than users just looking at 
+	other songs by the artist or songs in the same genre. A finding from our project could be that recommending songs by similarity of quantitative features could result in more user satisfaction 
+	than recommending songs based primarily on genre or artist. We could also find that music similarity in the user’s eyes is most driven by genre, artist, and year which could mean that human intuition 
+	is ultimately king in music choice. </p>
+<h3>
+<a id="authors-and-contributors2" class="anchor" href="#authors-and-contributors2" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Discussion</h3>
+<p>Points that may arise from this project is specifically looking into the implications of the recommendations system aside from generating music suggestions. Using the input information of the user, we are 
+	able to learn more about their music taste by observing the specifics of the cluster(s) that closely relate to the user’s interest. For example, we can identify the distribution matrix of the genres and 
+	years in the cluster. We understand that music ultimately comes down to listener preference and that it’s tough to quantify but we think that’s the beauty of models: trying to describe human intuition.</p>
+<h3>
+<a id="authors-and-contributors3" class="anchor" href="#authors-and-contributors3" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>References</h3>
+	<p> [1]<a href="https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/">https://developer.spotify.com/documentation/web-api/reference/tracks/get-audio-features/ </a></p>
+	<p> [2]<a href="https://www.kaggle.com/leonardopena/top-spotify-songs-from-20102019-by-year">https://www.kaggle.com/leonardopena/top-spotify-songs-from-20102019-by-year</a></p>
+	<p> [3]<a href="https://kwellesly.github.io/ML4Anime/">https://kwellesly.github.io/ML4Anime/</a></p>
+	<p> [4]<a href="https://medium.com/@briansrebrenik/introduction-to-music-recommendation-and-machine-learning-310c4841b01d#:~:text=These%20streaming%20services%2C%20like%20Spotify,comes%20to%20a%20certain%20item.">https://medium.com/@briansrebrenik/introduction-to-music-recommendation-and-machine-learning-310c4841b01d#:~:text=These%20streaming%20services%2C%20like%20Spotify,comes%20to%20a%20certain%20item.</a></p>
+	<p> [5]<a href="https://github.gatech.edu/pages/bpatil7/music.generation/#ref2">https://github.gatech.edu/pages/bpatil7/music.generation/#ref2</a></p>
+ 	 
+	      
+<h3>
+<!-- <a id="support-or-contact" class="anchor" href="#support-or-contact" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Support or Contact</h3>
+<p>Having trouble with Pages? Check out our <a href="https://help.github.com/pages">documentation</a> or <a href="https://github.com/contact">contact support</a> and we’ll help you sort it out.</p>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer> -->
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
